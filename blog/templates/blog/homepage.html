@@ -1,22 +1,17 @@
 {% extends 'main.html' %} {% load static %} {% block title %}Home{% endblock %}
 {% block content %}
-<section>
-  <div class="row">
-    <div class="col-full">
-      <div class="feature-slider slick-initialized slick-slider slick-dotted">
-        <div
-          class="slick-list draggable"
-          aria-live="polite"
-          style="padding: 0px 8%"
-        >
-          <div
-            class="slick-track"
-            style="
-              opacity: 1;
-              width: 6237px;
-              transform: translate3d(-1782px, 0px, 0px);
-            "
-          ></div>
+<section class="site-section pt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="owl-carousel owl-theme home-slider owl-loaded owl-drag">
+          <div class="owl-stage-counter">
+            <div class="owl-stage">
+              <div class="owl-item"></div>
+              <div class="owl-item"></div>
+              <div class="owl-item"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
