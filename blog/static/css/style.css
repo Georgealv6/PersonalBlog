@@ -79,3 +79,23 @@
 .brand span:hover {
   color: #21ba4a;
 }
+
+/* animated css */
+.animate__animated.animate__zoomIn {
+  --animate-delay: 1.7s;
+  --animate-duration: 1.2s;
+}
+.animate__animated.animate__bounce {
+  --animate-delay: 1s;
+  --animate-duration: 1.5s;
+}
+
+.animate__animated.animate__fadeInDown {
+  --animate-delay: 1s;
+  --animate-duration: 1.5s;
+}
+
+.animate__animated.animate__fadeInRight {
+  --animate-delay: 1s;
+  --animate-duration: 1.5s;
+}
