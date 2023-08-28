@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Work+Sans:ital,wght@0,400;1,300&display=swap");
+
 /* header */
 #header .top {
   position: relative;
@@ -77,7 +79,7 @@
 }
 
 .brand span:hover {
-  color: #21ba4a;
+  color: #2de25d;
 }
 
 /* animated css */
@@ -98,4 +100,20 @@
 .animate__animated.animate__fadeInRight {
   --animate-delay: 1s;
   --animate-duration: 1.5s;
+}
+
+/* buttons */
+.carousel .carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+.carousel-inner .carousel-caption h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 50px;
+}
+
+.carousel-inner .carousel-caption h3 {
+  font-family: "Oswald", sans-serif;
 }
