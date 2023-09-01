@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Work+Sans:ital,wght@0,400;1,300&display=swap");
 
+body {
+  background: #f8f8f8;
+}
 /* header */
 #header .top {
   position: relative;
@@ -109,6 +112,7 @@
   border-radius: 100%;
 }
 
+/* fonts&text */
 .carousel-inner .carousel-caption h1 {
   font-family: "Oswald", sans-serif;
   font-size: 50px;
@@ -116,4 +120,17 @@
 
 .carousel-inner .carousel-caption h3 {
   font-family: "Oswald", sans-serif;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+/* posts */
+
+.caption {
+  background: #fff;
+  margin: 40px auto;
+  padding: 1em 2em;
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.03);
 }
