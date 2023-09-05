@@ -14,6 +14,8 @@ class Carousel(models.Model):
 
 STATUS = ((0, "Draft"), (1, "Publish"))
 
+GENRE = ((0, "Experiences"), (1, "Code"))
+
 
 class BlogPost(models.Model):
     title = models.CharField(max_length=200, unique=True)
@@ -26,6 +28,7 @@ class BlogPost(models.Model):
     image = models.ImageField(upload_to="pics/%y/%m/%d/", blank=True, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
+    category = models.IntegerField(choices=GENRE, default=0)
 
     class Meta:
         ordering = ["-created_on"]
