@@ -60,7 +60,11 @@
       {% for post in posts %}
       <article class="postcard light blue">
         <a class="postcard__img_link" href="#">
-          <img class="postcard__img" src="{{ post.image }}" alt="Image Title" />
+          <img
+            class="postcard__img"
+            src="{{ post.image.url }}"
+            alt="Image Title"
+          />
         </a>
         <div class="postcard__text t-dark">
           <h1 class="postcard__title blue">
