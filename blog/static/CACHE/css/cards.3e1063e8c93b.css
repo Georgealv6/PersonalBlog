@@ -1,11 +1,11 @@
-/* line 10, static/css/cards.scss */
+/* line 8, static/css/cards.scss */
 a,
 a:hover {
   text-decoration: none;
   transition: color 0.3s ease-in-out; }
 
 /* Cards */
-/* line 16, static/css/cards.scss */
+/* line 15, static/css/cards.scss */
 .postcard {
   flex-wrap: wrap;
   display: flex;
@@ -15,40 +15,40 @@ a:hover {
   overflow: hidden;
   position: relative;
   color: #ffffff; }
-  /* line 27, static/css/cards.scss */
+  /* line 26, static/css/cards.scss */
   .postcard.dark {
     background-color: #18151f; }
-  /* line 30, static/css/cards.scss */
+  /* line 29, static/css/cards.scss */
   .postcard.light {
     background-color: #e1e5ea; }
-  /* line 34, static/css/cards.scss */
+  /* line 33, static/css/cards.scss */
   .postcard .t-dark {
     color: #18151f; }
-  /* line 38, static/css/cards.scss */
+  /* line 37, static/css/cards.scss */
   .postcard a {
     color: inherit; }
-  /* line 42, static/css/cards.scss */
+  /* line 41, static/css/cards.scss */
   .postcard h1,
   .postcard .h1 {
     margin-bottom: 0.5rem;
     font-weight: 500;
     line-height: 1.2; }
-  /* line 49, static/css/cards.scss */
+  /* line 48, static/css/cards.scss */
   .postcard .small {
     font-size: 80%; }
-  /* line 53, static/css/cards.scss */
+  /* line 52, static/css/cards.scss */
   .postcard .postcard__title {
     font-size: 1.75rem; }
-  /* line 57, static/css/cards.scss */
+  /* line 56, static/css/cards.scss */
   .postcard .postcard__img {
     max-height: 180px;
     width: 100%;
     object-fit: cover;
     position: relative; }
-  /* line 64, static/css/cards.scss */
+  /* line 63, static/css/cards.scss */
   .postcard .postcard__img_link {
     display: contents; }
-  /* line 68, static/css/cards.scss */
+  /* line 67, static/css/cards.scss */
   .postcard .postcard__bar {
     width: 50px;
     height: 10px;
@@ -56,19 +56,19 @@ a:hover {
     border-radius: 5px;
     background-color: #424242;
     transition: width 0.2s ease; }
-  /* line 77, static/css/cards.scss */
+  /* line 76, static/css/cards.scss */
   .postcard .postcard__text {
     padding: 1.5rem;
     position: relative;
     display: flex;
     flex-direction: column; }
-  /* line 84, static/css/cards.scss */
+  /* line 83, static/css/cards.scss */
   .postcard .postcard__preview-txt {
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: justify;
     height: 100%; }
-  /* line 91, static/css/cards.scss */
+  /* line 90, static/css/cards.scss */
   .postcard .postcard__tagbox {
     display: flex;
     flex-flow: row wrap;
@@ -76,7 +76,7 @@ a:hover {
     margin: 20px 0 0 0;
     padding: 0;
     justify-content: center; }
-    /* line 99, static/css/cards.scss */
+    /* line 98, static/css/cards.scss */
     .postcard .postcard__tagbox .tag__item {
       display: inline-block;
       background: rgba(83, 83, 83, 0.4);
@@ -86,10 +86,10 @@ a:hover {
       cursor: default;
       user-select: none;
       transition: background-color 0.3s; }
-      /* line 109, static/css/cards.scss */
+      /* line 108, static/css/cards.scss */
       .postcard .postcard__tagbox .tag__item:hover {
         background: rgba(83, 83, 83, 0.8); }
-  /* line 115, static/css/cards.scss */
+  /* line 114, static/css/cards.scss */
   .postcard:before {
     content: "";
     position: absolute;
@@ -100,30 +100,30 @@ a:hover {
     background-image: linear-gradient(-70deg, #424242, transparent 50%);
     opacity: 1;
     border-radius: 10px; }
-  /* line 127, static/css/cards.scss */
+  /* line 126, static/css/cards.scss */
   .postcard:hover .postcard__bar {
     width: 100px; }
 
 @media screen and (min-width: 769px) {
-  /* line 133, static/css/cards.scss */
+  /* line 132, static/css/cards.scss */
   .postcard {
     flex-wrap: inherit; }
-    /* line 136, static/css/cards.scss */
+    /* line 135, static/css/cards.scss */
     .postcard .postcard__title {
       font-size: 2rem; }
-    /* line 140, static/css/cards.scss */
+    /* line 139, static/css/cards.scss */
     .postcard .postcard__tagbox {
       justify-content: start; }
-    /* line 144, static/css/cards.scss */
+    /* line 143, static/css/cards.scss */
     .postcard .postcard__img {
       max-width: 300px;
       max-height: 100%;
       transition: transform 0.3s ease; }
-    /* line 150, static/css/cards.scss */
+    /* line 149, static/css/cards.scss */
     .postcard .postcard__text {
       padding: 3rem;
       width: 100%; }
-    /* line 155, static/css/cards.scss */
+    /* line 154, static/css/cards.scss */
     .postcard .media.postcard__text:before {
       content: "";
       position: absolute;
@@ -132,29 +132,29 @@ a:hover {
       top: -20%;
       height: 130%;
       width: 55px; }
-    /* line 165, static/css/cards.scss */
+    /* line 164, static/css/cards.scss */
     .postcard:hover .postcard__img {
       transform: scale(1.1); }
-    /* line 169, static/css/cards.scss */
+    /* line 168, static/css/cards.scss */
     .postcard:nth-child(2n + 1) {
       flex-direction: row; }
-    /* line 173, static/css/cards.scss */
+    /* line 172, static/css/cards.scss */
     .postcard:nth-child(2n + 0) {
       flex-direction: row-reverse; }
-    /* line 177, static/css/cards.scss */
+    /* line 176, static/css/cards.scss */
     .postcard:nth-child(2n + 1) .postcard__text::before {
       left: -12px !important;
       transform: rotate(4deg); }
-    /* line 182, static/css/cards.scss */
+    /* line 181, static/css/cards.scss */
     .postcard:nth-child(2n + 0) .postcard__text::before {
       right: -12px !important;
       transform: rotate(-4deg); } }
 
 @media screen and (min-width: 1024px) {
-  /* line 189, static/css/cards.scss */
+  /* line 188, static/css/cards.scss */
   .postcard__text {
     padding: 2rem 3.5rem; }
-  /* line 193, static/css/cards.scss */
+  /* line 192, static/css/cards.scss */
   .postcard__text:before {
     content: "";
     position: absolute;
@@ -162,97 +162,91 @@ a:hover {
     top: -20%;
     height: 130%;
     width: 55px; }
-  /* line 204, static/css/cards.scss */
+  /* line 203, static/css/cards.scss */
   .postcard.dark .postcard__text:before {
     background: #18151f; }
-  /* line 209, static/css/cards.scss */
+  /* line 208, static/css/cards.scss */
   .postcard.light .postcard__text:before {
     background: #e1e5ea; } }
 
 /* COLORS */
-/* line 216, static/css/cards.scss */
+/* line 215, static/css/cards.scss */
 .postcard .postcard__tagbox .green.play:hover {
-  background: #79dd09;
+  background: #0da235;
   color: black; }
 
-/* line 220, static/css/cards.scss */
+/* line 219, static/css/cards.scss */
 .green .postcard__title:hover {
-  color: #79dd09; }
+  color: #0da235; }
 
-/* line 223, static/css/cards.scss */
+/* line 222, static/css/cards.scss */
 .green .postcard__bar {
-  background-color: #79dd09; }
+  background-color: #0da235; }
 
-/* line 226, static/css/cards.scss */
+/* line 225, static/css/cards.scss */
 .green::before {
   background-image: linear-gradient(-30deg, rgba(121, 221, 9, 0.1), transparent 50%); }
 
-/* line 233, static/css/cards.scss */
+/* line 232, static/css/cards.scss */
 .green:nth-child(2n)::before {
   background-image: linear-gradient(30deg, rgba(121, 221, 9, 0.1), transparent 50%); }
 
-/* line 241, static/css/cards.scss */
+/* line 240, static/css/cards.scss */
 .postcard .postcard__tagbox .blue.play:hover {
   background: #0076bd; }
 
-/* line 244, static/css/cards.scss */
+/* line 243, static/css/cards.scss */
 .blue .postcard__title:hover {
   color: #0076bd; }
 
-/* line 247, static/css/cards.scss */
+/* line 246, static/css/cards.scss */
 .blue .postcard__bar {
   background-color: #0076bd; }
 
-/* line 250, static/css/cards.scss */
+/* line 249, static/css/cards.scss */
 .blue::before {
   background-image: linear-gradient(-30deg, rgba(0, 118, 189, 0.1), transparent 50%); }
 
-/* line 257, static/css/cards.scss */
+/* line 256, static/css/cards.scss */
 .blue:nth-child(2n)::before {
   background-image: linear-gradient(30deg, rgba(0, 118, 189, 0.1), transparent 50%); }
 
-/* line 261, static/css/cards.scss */
+/* line 260, static/css/cards.scss */
 .postcard .postcard__tagbox .red.play:hover {
   background: #bd150b; }
 
-/* line 264, static/css/cards.scss */
+/* line 263, static/css/cards.scss */
 .red .postcard__title:hover {
   color: #bd150b; }
 
-/* line 267, static/css/cards.scss */
+/* line 266, static/css/cards.scss */
 .red .postcard__bar {
   background-color: #bd150b; }
 
-/* line 270, static/css/cards.scss */
+/* line 269, static/css/cards.scss */
 .red::before {
   background-image: linear-gradient(-30deg, rgba(189, 21, 11, 0.1), transparent 50%); }
 
-/* line 273, static/css/cards.scss */
+/* line 272, static/css/cards.scss */
 .red:nth-child(2n)::before {
   background-image: linear-gradient(30deg, rgba(189, 21, 11, 0.1), transparent 50%); }
 
 @media screen and (min-width: 769px) {
-  /* line 278, static/css/cards.scss */
+  /* line 277, static/css/cards.scss */
   .green::before {
     background-image: linear-gradient(-80deg, rgba(121, 221, 9, 0.1), transparent 50%); }
-  /* line 285, static/css/cards.scss */
+  /* line 284, static/css/cards.scss */
   .green:nth-child(2n)::before {
     background-image: linear-gradient(80deg, rgba(121, 221, 9, 0.1), transparent 50%); }
-  /* line 293, static/css/cards.scss */
+  /* line 292, static/css/cards.scss */
   .blue::before {
     background-image: linear-gradient(-80deg, rgba(0, 118, 189, 0.1), transparent 50%); }
-  /* line 300, static/css/cards.scss */
+  /* line 299, static/css/cards.scss */
   .blue:nth-child(2n)::before {
     background-image: linear-gradient(80deg, rgba(0, 118, 189, 0.1), transparent 50%); }
-  /* line 308, static/css/cards.scss */
+  /* line 307, static/css/cards.scss */
   .red::before {
     background-image: linear-gradient(-80deg, rgba(189, 21, 11, 0.1), transparent 50%); }
-  /* line 315, static/css/cards.scss */
+  /* line 314, static/css/cards.scss */
   .red:nth-child(2n)::before {
-    background-image: linear-gradient(80deg, rgba(189, 21, 11, 0.1), transparent 50%); }
-  /* line 323, static/css/cards.scss */
-  .yellow::before {
-    background-image: linear-gradient(-80deg, rgba(189, 187, 73, 0.1), transparent 50%); }
-  /* line 330, static/css/cards.scss */
-  .yellow:nth-child(2n)::before {
-    background-image: linear-gradient(80deg, rgba(189, 187, 73, 0.1), transparent 50%); } }
+    background-image: linear-gradient(80deg, rgba(189, 21, 11, 0.1), transparent 50%); } }

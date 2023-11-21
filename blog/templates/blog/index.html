@@ -58,7 +58,8 @@
   <section class="dark">
     <div class="container py-4">
       {% for post in posts %}
-      <article class="postcard light blue">
+      <article class="postcard light green">
+        {% if post.image %}
         <a class="postcard__img_link" href="#">
           <img
             class="postcard__img"
@@ -66,8 +67,9 @@
             alt="Image Title"
           />
         </a>
+        {% endif %}
         <div class="postcard__text t-dark">
-          <h1 class="postcard__title blue">
+          <h1 class="postcard__title green">
             <a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a>
           </h1>
           <div class="postcard__subtitle small">
