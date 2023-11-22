@@ -1,9 +1,9 @@
-$main-green: rgb(13, 162, 53) !default;
+$main-green: #0bc23c !default;
 $main-green-rgb-015: rgba(121, 221, 9, 0.1) !default;
 $main-red: #bd150b !default;
 $main-red-rgb-015: rgba(189, 21, 11, 0.1) !default;
-$main-blue: #0076bd !default;
-$main-blue-rgb-015: rgba(0, 118, 189, 0.1) !default;
+$main-gray: #a3c3d7 !default;
+$main-gray-rgb-015: rgba(0, 118, 189, 0.1) !default;
 
 a,
 a:hover {
@@ -15,7 +15,6 @@ a:hover {
 .postcard {
   flex-wrap: wrap;
   display: flex;
-
   box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
   border-radius: 10px;
   margin: 0 0 2rem 0;
@@ -65,8 +64,8 @@ a:hover {
   }
 
   .postcard__bar {
-    width: 50px;
-    height: 10px;
+    width: 60px;
+    height: 8.5px;
     margin: 10px 0;
     border-radius: 5px;
     background-color: #424242;
@@ -85,30 +84,6 @@ a:hover {
     text-overflow: ellipsis;
     text-align: justify;
     height: 100%;
-  }
-
-  .postcard__tagbox {
-    display: flex;
-    flex-flow: row wrap;
-    font-size: 14px;
-    margin: 20px 0 0 0;
-    padding: 0;
-    justify-content: center;
-
-    .tag__item {
-      display: inline-block;
-      background: rgba(83, 83, 83, 0.4);
-      border-radius: 3px;
-      padding: 2.5px 10px;
-      margin: 0 5px 5px 0;
-      cursor: default;
-      user-select: none;
-      transition: background-color 0.3s;
-
-      &:hover {
-        background: rgba(83, 83, 83, 0.8);
-      }
-    }
   }
 
   &:before {
@@ -237,24 +212,24 @@ a:hover {
   );
 }
 
-.postcard .postcard__tagbox .blue.play:hover {
-  background: $main-blue;
+.postcard .postcard__tagbox .gray.play:hover {
+  background: $main-gray;
 }
-.blue .postcard__title:hover {
-  color: $main-blue;
+.gray .postcard__title:hover {
+  color: $main-green;
 }
-.blue .postcard__bar {
-  background-color: $main-blue;
+.gray .postcard__bar {
+  background-color: $main-green;
 }
-.blue::before {
+.gray::before {
   background-image: linear-gradient(
     -30deg,
-    $main-blue-rgb-015,
+    $main-gray-rgb-015,
     transparent 50%
   );
 }
-.blue:nth-child(2n)::before {
-  background-image: linear-gradient(30deg, $main-blue-rgb-015, transparent 50%);
+.gray:nth-child(2n)::before {
+  background-image: linear-gradient(30deg, $main-gray-rgb-015, transparent 50%);
 }
 
 .postcard .postcard__tagbox .red.play:hover {
@@ -289,17 +264,17 @@ a:hover {
     );
   }
 
-  .blue::before {
+  .gray::before {
     background-image: linear-gradient(
       -80deg,
-      $main-blue-rgb-015,
+      $main-gray-rgb-015,
       transparent 50%
     );
   }
-  .blue:nth-child(2n)::before {
+  .gray:nth-child(2n)::before {
     background-image: linear-gradient(
       80deg,
-      $main-blue-rgb-015,
+      $main-gray-rgb-015,
       transparent 50%
     );
   }

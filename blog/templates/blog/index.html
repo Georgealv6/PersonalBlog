@@ -55,10 +55,10 @@
     </div>
   </div>
 
-  <section class="dark">
+  <section>
     <div class="container py-4">
       {% for post in posts %}
-      <article class="postcard light green">
+      <article class="postcard light gray">
         {% if post.image %}
         <a class="postcard__img_link" href="#">
           <img
@@ -69,7 +69,7 @@
         </a>
         {% endif %}
         <div class="postcard__text t-dark">
-          <h1 class="postcard__title green">
+          <h1 class="postcard__title">
             <a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a>
           </h1>
           <div class="postcard__subtitle small">
