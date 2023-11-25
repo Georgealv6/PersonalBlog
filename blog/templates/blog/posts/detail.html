@@ -1,15 +1,14 @@
 {% extends 'main.html' %} {% load static %} {% block title %}Post{% endblock %}
 {% block content %}
 <div class="container">
-  <div class="row">
-    <div class="col-md-8 card mb-4 mt-3 left top">
-      <div class="card-body">
+  <div class="post">
+    <img class="headerimg w-100 mt-4" src="{{ posts.image.url }}" alt="" />
+    <div class="caption">
+      <div class="header">
         <h1>{{ posts.title }}</h1>
-        <p class="card-text text-muted h6">
-          {{ posts.author }} | {{ posts.created_on }}
-        </p>
-        <p class="card-text">{{ posts.content | safe }}</p>
+        <p class="text-muted h6">{{ posts.author }} | {{ posts.created_on }}</p>
       </div>
+      <p class="text-md-center">{{ posts.content | safe }}</p>
     </div>
   </div>
 </div>
