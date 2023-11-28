@@ -136,6 +136,6 @@ body {
 }
 
 .headerimg {
-  position: relative;
-  height: 50%;
+  object-fit: cover;
+  max-height: 100vh;
 }
