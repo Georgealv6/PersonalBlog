@@ -14,7 +14,7 @@ class Carousel(models.Model):
 
 STATUS = ((0, "Draft"), (1, "Publish"))
 
-GENRE = ((0, "Experiences"), (1, "Code"))
+GENRE = ((0, "Lifestyle"), (1, "Code"))
 
 
 class BlogPost(models.Model):
