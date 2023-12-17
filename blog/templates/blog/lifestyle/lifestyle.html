@@ -1,16 +1,25 @@
 {% extends 'main.html' %} {% load static %} {% block content %}
-<div class="container">
+<div class="container py-4">
   {% for post in detail %}
-  <div class="post">
-    <img class="headerimg w-100 mt-4" src="{{ post.image.url }}" alt="" />
-    <div class="caption">
-      <div class="header">
-        <h1>{{ post.title }}</h1>
-        <p class="text-muted h6">{{ post.author }} | {{ post.created_on }}</p>
+  <article class="postcard light gray">
+    {% if post.image %}
+    <a class="postcard__img_link" href="{% url 'post_detail' post.slug %}">
+      <img class="postcard__img" src="{{ post.image.url }}" alt="Image Title" />
+    </a>
+    {% endif %}
+    <div class="postcard__text t-dark">
+      <h1 class="postcard__title">
+        <a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a>
+      </h1>
+      <div class="postcard__subtitle small">
+        <i class="fas fa-calendar-alt mr-2"
+          >{{ post.author }} | {{ post.created_on }}</i
+        >
       </div>
-      <p class="text-md-center">{{ post.content | safe }}</p>
+      <div class="postcard__bar"></div>
+      <div class="postcard__preview-txt">{{ post.content|slice:":200" }}</div>
     </div>
-  </div>
+  </article>
   {% endfor %}
 </div>
 {% endblock content %}
