@@ -1,6 +1,6 @@
-{% extends 'main.html' %} {% load static %} {% block title %}Experiences{%
-endblock %} {% block content %} {% for post in pagetwo %}
+{% extends 'main.html' %} {% load static %} {% block content %}
 <div class="container">
+  {% for post in detail %}
   <div class="post">
     <img class="headerimg w-100 mt-4" src="{{ post.image.url }}" alt="" />
     <div class="caption">
@@ -11,5 +11,6 @@ endblock %} {% block content %} {% for post in pagetwo %}
       <p class="text-md-center">{{ post.content | safe }}</p>
     </div>
   </div>
+  {% endfor %}
 </div>
-{% endfor %} {% endblock content %}
+{% endblock content %}

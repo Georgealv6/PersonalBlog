@@ -15,18 +15,8 @@ def postdetail(request, slug):
     return render(request, "blog/posts/detail.html", context)
 
 
-def codepage(request, Code):
-    post = BlogPost.objects.filter(category=Code)
-    context = {"pageone": post}
-    return render(request, "blog/code/codepage.html", context)
-
-
-def experiencepage(request, Lifestyle):
-    post = BlogPost.objects.filter(category=Lifestyle)
-    context = {"pagetwo": post}
-    return render(request, "blog/code/experiences.html", context)
-
-
-# class PostDetail(generic.DetailView):
-#     model = BlogPost
-#     template_name = "blog/posts/detail.html"
+def lifestyleposts(request):
+    chosen_category = "0"
+    post = BlogPost.objects.filter(category=chosen_category)
+    context = {"detail": post, "chosen_category": chosen_category}
+    return render(request, "blog/lifestyle/lifestyle.html", context)
