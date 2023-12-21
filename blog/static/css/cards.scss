@@ -2,7 +2,7 @@ $main-green: #0bc23c !default;
 $main-green-rgb-015: rgba(121, 221, 9, 0.1) !default;
 $main-red: #bd150b !default;
 $main-red-rgb-015: rgba(189, 21, 11, 0.1) !default;
-$main-gray: #a3c3d7 !default;
+$main-gray: #cfd6dc !default;
 $main-gray-rgb-015: rgba(0, 118, 189, 0.1) !default;
 
 a,
@@ -16,7 +16,7 @@ a:hover {
   flex-wrap: wrap;
   display: flex;
   box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
-  border-radius: 10px;
+  border-radius: 11px;
   margin: 0 0 2rem 0;
   overflow: hidden;
   position: relative;

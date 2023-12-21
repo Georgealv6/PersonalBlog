@@ -8,9 +8,7 @@
         <h1>{{ posts.title }}</h1>
         <p class="text-muted h6">{{ posts.author }} | {{ posts.created_on }}</p>
       </div>
-      <div class="text-center">
-        <p class="text-md-center">{{ posts.content | linebreaks }}</p>
-      </div>
+      <p class="text-md-center">{{ posts.content | linebreaksbr }}</p>
     </div>
   </div>
 </div>
