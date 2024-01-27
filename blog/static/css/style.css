@@ -105,6 +105,11 @@ body {
   --animate-duration: 1.5s;
 }
 
+.animate__animated.animate__slideInDown {
+  --animate-delay: 1s;
+  --animate-duration: 1.5s;
+}
+
 /* buttons */
 .carousel .carousel-indicators button {
   width: 10px;

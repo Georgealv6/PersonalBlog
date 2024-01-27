@@ -30,24 +30,35 @@
       ></button>
     </div>
     <div class="carousel-inner">
-      {% for img in carousel %}
+      {% for item in carousel %}
       <div
         class="carousel-item{% if forloop.counter0 == 0%} active {% endif %}"
       >
+        {% if item.route %}
+        <a href="{% url item.route %}">
+          <img
+            src="{{item.image.url}}"
+            style="height: 700px; object-fit: cover"
+            class="img-fluid d-block w-100"
+            alt="..."
+          />
+        </a>
+        {% else %}
         <img
-          src="{{img.image.url}}"
+          src="{{item.image.url}}"
           style="height: 700px; object-fit: cover"
           class="img-fluid d-block w-100"
           alt="..."
         />
+        {% endif %}
         <div class="carousel-caption d-none d-md-block">
           <h1
             class="animate__animated {% if forloop.counter0 == 0%} animate__fadeInDown {% endif %} {% if forloop.revcounter == 1 %} animate__slideInDown {% endif %} {% if forloop.revcounter == 2 %} animate__slideInDown {% endif %}"
           >
-            {{img.title}}
+            {{item.title}}
           </h1>
           <h3 class="animate__animated animate__slideInDown">
-            {{img.sub_title}}
+            {{item.sub_title}}
           </h3>
         </div>
       </div>
