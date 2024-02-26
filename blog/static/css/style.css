@@ -150,3 +150,12 @@ body {
   margin: 0 0 2rem 0;
   box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.71);
 }
+
+.article_text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify;
+  height: 100%;
+  font-family: "Oswald";
+  font-size: 1.3rem;
+}
