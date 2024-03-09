@@ -1,14 +1,10 @@
-$(".carousel").swipe({
-  swipe: function (
-    event,
-    direction,
-    distance,
-    duration,
-    fingerCount,
-    fingerData
-  ) {
-    if (direction == "left") $(this).carousel("next");
-    if (direction == "right") $(this).carousel("prev");
-  },
-  allowPageScroll: "vertical",
+// pop img
+$(document).ready(function () {
+  var popup_btn = $(".popup-btn");
+  popup_btn.magnificPopup({
+    type: "image",
+    gallery: {
+      enabled: true,
+    },
+  });
 });
