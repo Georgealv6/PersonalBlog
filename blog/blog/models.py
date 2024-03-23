@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+# from django.contrib.auth.mixins import date
 
 ROUTES = (
     (0, "homepage"),
@@ -34,6 +35,7 @@ class BlogPost(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
     image = models.ImageField(upload_to="pics/%y/%m/%d/", blank=True, null=True)
+    gallery = models.ManyToManyField('Image', blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     category = models.IntegerField(choices=GENRE, default=0)
@@ -43,3 +45,9 @@ class BlogPost(models.Model):
 
     def __str__(self):
         return self.title
+
+class Image(models.Model):
+    image = models.ImageField(upload_to="pics/%y/%m/%d/", blank=True, null=True)
+
+    def __str__(self):
+        return self.image.name
