@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404, render
-from .models import Carousel, BlogPost
+from .models import Carousel, BlogPost, Image
 
 
 def homepage(request):
@@ -9,9 +9,13 @@ def homepage(request):
     return render(request, "blog/index.html", context)
 
 
-def postdetail(request, slug):
+def postdetail(request, slug, blogpost_id):
     post = get_object_or_404(BlogPost, slug=slug)
-    context = {"posts": post}
+    blog = BlogPost.objects.get(pk=blogpost_id)
+    gallery = BlogPost.gallery.all()
+    context = {"posts": post,
+               "gallery": gallery,
+               "blog": blog}
     return render(request, "blog/posts/detail.html", context)
 
 
