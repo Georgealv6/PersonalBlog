@@ -9,15 +9,17 @@ def homepage(request):
     return render(request, "blog/index.html", context)
 
 
-def postdetail(request, slug, blogpost_id):
+def postdetail(request, slug):
     post = get_object_or_404(BlogPost, slug=slug)
-    blog = BlogPost.objects.get(pk=blogpost_id)
-    gallery = BlogPost.gallery.all()
-    context = {"posts": post,
-               "gallery": gallery,
-               "blog": blog}
+    context = {"posts": post}
     return render(request, "blog/posts/detail.html", context)
 
+def gallery(request, blog_id):
+    blog = BlogPost.objects.get(pk=blog_id)
+    img = blog.gallery.all()
+    context = {"blog": blog,
+               "img": img}
+    return render(request, "blog/posts/detail.html", context)
 
 def lifestyleposts(request):
     chosen_category = "0"
