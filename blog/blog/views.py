@@ -16,9 +16,9 @@ def postdetail(request, slug):
 
 def gallery(request, blog_id):
     blog = BlogPost.objects.get(pk=blog_id)
-    img = blog.gallery.all()
+    gallery = blog.gallery.all()
     context = {"blog": blog,
-               "img": img}
+               "gallery": gallery}
     return render(request, "blog/posts/detail.html", context)
 
 def lifestyleposts(request):

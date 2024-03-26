@@ -7,5 +7,5 @@ urlpatterns = [
     path("posts/lifstyle", views.lifestyleposts, name="lifestyle"),
     path("posts/code", views.codeposts, name="code"),
     path("post/<slug:slug>/", views.postdetail, name="post_detail"),
-    path("post/<int:post_id>", views.postdetail, name="post_detail"),
+    path("post/<int:blog_id>", views.gallery, name="post_detail"),
 ]
