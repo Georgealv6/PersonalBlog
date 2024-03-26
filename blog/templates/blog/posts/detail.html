@@ -15,14 +15,12 @@
   </div>
   <div class="container">
     <div class="post">
-      {% if gallery %}
       <h2>Images</h2>
-      <div class="image-gallery">
+      <div class="caption">
         {% for image in gallery %}
-        <img src="{{ image.image.url }}" alt="Image" />
+        <img src="{{ image.gallery.url }}" alt="Image" />
         {% endfor %}
       </div>
-      {% endif %}
     </div>
   </div>
 </div>

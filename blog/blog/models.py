@@ -35,7 +35,6 @@ class BlogPost(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
     image = models.ImageField(upload_to="pics/%y/%m/%d/", blank=True, null=True)
-    gallery = models.ManyToManyField('Image', blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     category = models.IntegerField(choices=GENRE, default=0)
@@ -47,7 +46,8 @@ class BlogPost(models.Model):
         return self.title
 
 class Image(models.Model):
-    image = models.ImageField(upload_to='images/', null=True)
+    item = models.ForeignKey(BlogPost, related_name='images', on_delete=models.CASCADE, null=True)
+    image = models.ImageField(upload_to='images/', null=True)  
 
     def __str__(self):
-        return self.image.name
+        return self.images.name
