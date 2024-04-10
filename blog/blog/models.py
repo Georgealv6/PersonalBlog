@@ -50,4 +50,4 @@ class Image(models.Model):
     image = models.ImageField(upload_to='images/', null=True)  
 
     def __str__(self):
-        return self.images.name
+        return self.image.name
