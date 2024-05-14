@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Carousel, BlogPost, Image
+from .models import Carousel, BlogPost, BlogImages
 # from .forms import GalleryForm
 
 # Register your models here.
@@ -18,4 +18,4 @@ admin.site.register(BlogPost, PostAdmin)
 # class GalleryAdmin(admin.ModelAdmin):
 #     form = GalleryForm
 
-admin.site.register(Image)
+admin.site.register(BlogImages)

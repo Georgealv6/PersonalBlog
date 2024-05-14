@@ -17,8 +17,8 @@
     <div class="post">
       <h2>Images</h2>
       <div class="caption">
-        {% for image in gallery %}
-        <img src="{{ image.gallery.url }}" alt="Image" />
+        {% for image in images %}
+        <img src="{{ image.image.url }}" alt="Image" />
         {% endfor %}
       </div>
     </div>
