@@ -82,7 +82,7 @@ body {
 }
 
 .brand span:hover {
-  color: #2de25d;
+  color: #62b800;
 }
 
 /* animated css */
@@ -154,8 +154,11 @@ body {
 .article_text {
   overflow: hidden;
   text-overflow: ellipsis;
-  text-align: justify;
   height: 100%;
   font-family: "Oswald";
   font-size: 1.3rem;
+}
+
+p {
+  color: #000;
 }
