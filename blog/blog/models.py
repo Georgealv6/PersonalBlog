@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+
 # from django.contrib.auth.mixins import date
 
 ROUTES = (
@@ -42,15 +43,15 @@ class BlogPost(models.Model):
     class Meta:
         ordering = ["-created_on"]
 
-    def __str__(self):
+    def __Str__(self):
         return self.title
 
-class BlogImages(models.Model):
-    item = models.ForeignKey(BlogPost, related_name='images', on_delete=models.CASCADE, null=True)
-    image = models.ImageField(upload_to='images/', null=True)  
 
-    def __str__(self):
-        if self.image:
-            return self.image.name
-        else:
-            return "No Image"
+# class BlogImages(models.Model):
+#     item = models.ForeignKey(
+#         BlogPost, related_name="images", on_delete=models.CASCADE, null=True
+#     )
+#     image = models.ImageField(upload_to="images/", null=True)
+
+#     def __Str__(self):
+#         return self.image

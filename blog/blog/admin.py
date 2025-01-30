@@ -1,11 +1,8 @@
 from django.contrib import admin
-from .models import Carousel, BlogPost, BlogImages
+from .models import Carousel, BlogPost
+
+
 # from .forms import GalleryForm
-
-# Register your models here.
-admin.site.register(Carousel)
-
-
 class PostAdmin(admin.ModelAdmin):
     list_display = ("title", "slug", "status", "category", "created_on")
     list_filter = ("status",)
@@ -13,9 +10,7 @@ class PostAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
 
 
+# Register your models here.
+admin.site.register(Carousel)
 admin.site.register(BlogPost, PostAdmin)
-
-# class GalleryAdmin(admin.ModelAdmin):
-#     form = GalleryForm
-
-admin.site.register(BlogImages)
+# admin.site.register(BlogImages)
