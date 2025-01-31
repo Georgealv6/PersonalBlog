@@ -1,18 +1,18 @@
 from django.shortcuts import get_object_or_404, render
-from .models import Carousel, BlogPost
+from .models import Carousel, BlogPost, BlogPostImage
 
 
 def homepage(request):
     carousel = Carousel.objects.all()
-    post = BlogPost.objects.filter(status=1).order_by("created_on")
+    post = BlogPost.objects.filter(status=1).order_by("-created_on")
     context = {"carousel": carousel, "posts": post}
     return render(request, "blog/index.html", context)
 
 
 def postdetail(request, slug):
-    post = get_object_or_404(BlogPost, slug=slug)
-    # img = BlogImages.objects.all()
-    context = {"posts": post}
+    blog_post = get_object_or_404(BlogPost, slug=slug)
+    images = BlogPostImage.objects.filter(blog_post=blog_post)
+    context = {"posts": blog_post, "images": images}
     return render(request, "blog/posts/detail.html", context)
 
 

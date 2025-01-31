@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Carousel, BlogPost
+from .models import Carousel, BlogPost, BlogPostImage
 
 
 # from .forms import GalleryForm
@@ -13,4 +13,15 @@ class PostAdmin(admin.ModelAdmin):
 # Register your models here.
 admin.site.register(Carousel)
 admin.site.register(BlogPost, PostAdmin)
-# admin.site.register(BlogImages)
+
+
+class BlogPostImageInline(admin.TabularInline):
+    model = BlogPostImage
+    extra = 3  # Allows uploading multiple imgs at once
+
+
+class BlogPostAdmin(admin.ModelAdmin):
+    inlines = [BlogPostImageInline]
+
+
+admin.site.register(BlogPostImage)

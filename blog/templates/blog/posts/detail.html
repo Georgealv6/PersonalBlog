@@ -2,7 +2,11 @@
 {% block content %}
 <div class="container">
   <div class="post">
-    <img class="headerimg w-100 mt-4" src="{{ posts.image.url }}" alt="" />
+    <img
+      class="headerimg w-100 mt-4"
+      src="{{ posts.header_image.url }}"
+      alt=""
+    />
     <div class="caption">
       <div class="header">
         <h1>{{ posts.title }}</h1>
@@ -13,6 +17,49 @@
       </p>
     </div>
   </div>
+  <div class="container py-4">
+    <div id="blogPostCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        {% for image in images %}
+        <button
+          type="button"
+          data-bs-target="#blogPostCarousel"
+          data-bs-slide-to="{{ forloop.counter0 }}"
+          class="{% if forloop.first %}active{% endif %}"
+        ></button>
+        {% endfor %}
+      </div>
 
+      <div class="carousel-inner">
+        {% for image in images %}
+        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+          <img
+            src="{{ image.images.url }}"
+            class="d-block w-100"
+            alt="Image for {{ blog_post.title }}"
+          />
+        </div>
+        {% endfor %}
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#blogPostCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#blogPostCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
   {% endblock content %}
 </div>

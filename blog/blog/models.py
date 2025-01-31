@@ -17,7 +17,7 @@ class Carousel(models.Model):
     sub_title = models.CharField(max_length=100, blank=True)
     route = models.CharField(max_length=100)
 
-    def __Str__(self):
+    def __str__(self):
         return self.title
 
 
@@ -35,7 +35,7 @@ class BlogPost(models.Model):
     )
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
-    image = models.ImageField(upload_to="pics/%y/%m/%d/", blank=True, null=True)
+    header_image = models.ImageField(upload_to="pics/%y/%m/%d/", blank=True, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     category = models.IntegerField(choices=GENRE, default=0)
@@ -43,15 +43,15 @@ class BlogPost(models.Model):
     class Meta:
         ordering = ["-created_on"]
 
-    def __Str__(self):
+    def __str__(self):
         return self.title
 
 
-# class BlogImages(models.Model):
-#     item = models.ForeignKey(
-#         BlogPost, related_name="images", on_delete=models.CASCADE, null=True
-#     )
-#     image = models.ImageField(upload_to="images/", null=True)
+class BlogPostImage(models.Model):
+    blog_post = models.ForeignKey(
+        BlogPost, on_delete=models.CASCADE, related_name="images"
+    )
+    images = models.ImageField(upload_to="blog_images/%y/%m/%d/")
 
-#     def __Str__(self):
-#         return self.image
+    def __str__(self):
+        return f"Image for {self.blog_post.title}"
