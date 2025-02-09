@@ -17,8 +17,13 @@
       </p>
     </div>
   </div>
-  <div class="container py-4">
-    <div id="blogPostCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="container py-4 d-flex justify-content-center">
+    <div
+      id="blogPostCarousel"
+      class="carousel slide"
+      data-bs-ride="carousel"
+      style="max-width: 600px"
+    >
       <div class="carousel-indicators">
         {% for image in images %}
         <button
@@ -37,6 +42,7 @@
             src="{{ image.images.url }}"
             class="d-block w-100"
             alt="Image for {{ blog_post.title }}"
+            style="border-radius: 10px"
           />
         </div>
         {% endfor %}

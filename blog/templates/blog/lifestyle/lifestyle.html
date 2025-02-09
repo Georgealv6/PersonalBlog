@@ -2,9 +2,13 @@
 <div class="container py-4">
   {% for post in detail %}
   <article class="postcard light bone">
-    {% if post.image %}
+    {% if post.header_image %}
     <a class="postcard__img_link" href="{% url 'post_detail' post.slug %}">
-      <img class="postcard__img" src="{{ post.image.url }}" alt="Image Title" />
+      <img
+        class="postcard__img"
+        src="{{ post.header_image.url }}"
+        alt="Image Title"
+      />
     </a>
     {% endif %}
     <div class="postcard__text t-dark">
