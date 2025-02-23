@@ -44,7 +44,7 @@ body {
   .navbar-nav > .active > a,
   .navbar-nav > .active > a:hover,
   .navbar-nav > .active > a:focus {
-    border-bottom: 2px solid #e5e5e5;
+    border-bottom: 2px solid #488800;
   }
 }
 
@@ -82,7 +82,7 @@ body {
 }
 
 .brand span:hover {
-  color: #62b800;
+  color: #488800;
 }
 
 /* animated css */
@@ -161,4 +161,9 @@ body {
 
 p {
   color: #000;
+}
+
+.carousel-img {
+  height: 550px;
+  object-fit: cover;
 }

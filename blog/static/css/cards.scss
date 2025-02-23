@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&family=Work+Sans:ital,wght@0,400;1,300&display=swap");
 $main-green: #62b800 !default;
+$title-green: #488800 !default;
 $main-bone: #f8f8f8 !default;
 $main-bone-rgb-015: rgba(95, 92, 92, 0.232) !default;
 
@@ -196,7 +197,7 @@ a:hover {
   background-color: $main-bone;
 }
 .bone .postcard__title:hover {
-  color: $main-green;
+  color: $title-green;
 }
 .bone .postcard__bar {
   background-color: $main-green;

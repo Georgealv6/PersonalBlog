@@ -22,9 +22,9 @@
       id="blogPostCarousel"
       class="carousel slide"
       data-bs-ride="carousel"
-      style="max-width: 600px"
+      style="max-width: 600px max"
     >
-      <div class="carousel-indicators">
+      <div class="carousel-indicators pb-sm-3">
         {% for image in images %}
         <button
           type="button"
@@ -40,7 +40,7 @@
         <div class="carousel-item {% if forloop.first %}active{% endif %}">
           <img
             src="{{ image.images.url }}"
-            class="d-block w-100"
+            class="d-block w-100 carousel-img"
             alt="Image for {{ blog_post.title }}"
             style="border-radius: 10px"
           />
